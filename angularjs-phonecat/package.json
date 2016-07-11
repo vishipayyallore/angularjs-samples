@@ -1,4 +1,18 @@
 {
-    
-
+    "name": "angular-phonecat",
+    "private": true,
+    "version": "1.0.0",
+    "description": "A tutorial application for Learning AngularJS",
+    "repository": "https://github.com/vishipayyallore/angularjs-samples/tree/master/angularjs-phonecat",
+    "license": "Apache License",
+    "devDependencies": {
+        "bower": "1.7.9",
+        "http-server": "0.9.0",
+        "jasmine-core": "2.4.1",
+        "karma": "1.1.1",
+        "karma-chrome-launcher": "1.0.1",
+        "karma-firefox-launcher": "1.0.0",
+        "karma-jasmine": "1.0.2",
+        "protractor": "3.3.0"
+    }
 }
