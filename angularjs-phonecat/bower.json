@@ -1,0 +1,19 @@
+{
+    "name": "angular-phonecat",
+    "description": "A starter project for AngularJS",
+    "version": "1.0.0",
+    "homepage": "https://github.com/vishipayyallore/angularjs-samples",
+    "license": "Apache License",
+    "private": false,
+    "dependencies": {
+        "bootstrap": "latest",
+        "jquery-validation": "latest",
+        "jquery-validation-unobtrusive": "latest",
+        "jquery": "latest",
+        "font-awesome": "latest",
+        "bootswatch": "latest",
+        "angular": "latest",
+        "angular-mocks": "latest",
+        "angular-ui-router": "latest"
+    }
+}
