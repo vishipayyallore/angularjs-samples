@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="phoneCatApp">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,12 +9,11 @@
     <link rel="stylesheet" href="bower_components//font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="css/site.css" />
     <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="PhoneList/phonelist.controller.js"></script>
   </head>
   <body>
-<div id="sidebar">
-        <div class="center-block">
-            <img src="~/images/PSM.png" alt="headshot" class="headshot" />
-        </div>
+    <div id="sidebar">
         <ul class="nav">
             <li class="active"><a asp-controller="Home" asp-action="Index">Home</a></li>
             <li><a asp-controller="App" asp-action="About">About</a></li>
@@ -26,37 +25,31 @@
 
     <div id="wrapper">
         <div class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <img src="~/images/PSMLogo.png" alt="headshotLogo" class="headshotLogo" />
-                </div>
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div>
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>Clients</li>
-                        <li>Contact Us</li>
-                    </ul>
+                    <div style="margin-top: 5Px; margin-left: -0Px" class="panel-heading"> 
+                        <a href="/AddClient" class="btn btn-xs btn-warning"><i class="fa fa-fa-home" aria-hidden="true"></i> Home</a> |&nbsp;
+                        <a href="/AddClient" class="btn btn-xs btn-warning"><i class="fa fa-plus-square" aria-hidden="true"></i> New Client</a>
+                    </div>
                 </div>
-            </div>
         </div>
-        <div class="container body-content">
-            <hr>
-           <p>{{'Hello ' + ' Angular JS' + '!' }}</p>
+        
+        <div class="row" ng-controller="ClientController">
+            <div class="container" style="margin-left: 0Px">
+                <hr>
+                <p>{{'Hello ' + ' Angular JS' + '!' }}</p>
+                
+            </div>
+
+            <footer>
+                <hr class="hr-layout" />
+                <div class="float-left">
+                    <p>&copy; 2016.</p>
+                </div>
+            </footer>
         </div>
 
-        <footer>
-            <hr class="hr-layout" />
-            <div class="float-left">
-                <p>&copy; 2016.</p>
-            </div>
-        </footer>
     </div>
-
+    
+        
   </body>
 </html>
