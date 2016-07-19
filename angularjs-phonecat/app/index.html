@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/site.css" />
     <script src="bower_components/angular/angular.js"></script>
     <script src="app.js"></script>
+    <script src="PhoneListController.js"></script>
   </head>
   <body>
     <div id="sidebar">
@@ -32,10 +33,15 @@
                 </div>
         </div>
         
-        <div class="row">
+        <div class="row" ng-controller="PhoneListController">
             <div class="container" style="margin-left: 0Px">
                 <hr>
-                <p>{{'Hello ' + ' Angular JS' + '!' }}</p>
+                <ul>
+                    <li ng-repeat="phone in phones">
+                        <span>{{phone.name}}</span>
+                        <p>{{phone.snippet}}</p>
+                    </li>
+                </ul>
                 
             </div>
 
