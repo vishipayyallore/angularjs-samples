@@ -1,6 +1,8 @@
-'use strict';
+
 
 describe('PhoneListController', function() {
+  
+  'use strict';
 
   beforeEach(module('phonecatApp'));
 
