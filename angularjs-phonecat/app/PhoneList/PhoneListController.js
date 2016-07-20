@@ -14,6 +14,9 @@
                 name: 'Nexus S',
                 snippet: 'Fast just got faster with Nexus S.'
                 }, {
+                name: 'Nexus S2',
+                snippet: 'Fast just got faster with Nexus S2.'
+                },{
                 name: 'Motorola XOOM™ with Wi-Fi',
                 snippet: 'The Next, Next Generation tablet.'
                 }, {
