@@ -9,7 +9,7 @@
         function PhoneListController($scope){
             var vm = this;
 
-            $scope.phones = [
+            vm.phones = [
                 {
                 name: 'Nexus S',
                 snippet: 'Fast just got faster with Nexus S.'
