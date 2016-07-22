@@ -3,7 +3,7 @@
 
     "use strict";
 
-    angular.module("phonecatApp")
+    angular.module("phoneList")
         .controller('PhoneListController', ["$scope", PhoneListController]);
 
         function PhoneListController($scope){
