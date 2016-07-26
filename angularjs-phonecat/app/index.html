@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en" ng-app="phonecatApp">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phone Catalog a Sample Angular JS application.</title>
-    
+
     <link rel="stylesheet" href="bower_components//bootswatch/darkly/bootstrap.css" />
     <link rel="stylesheet" href="bower_components//font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="css/site.css" />
@@ -13,41 +14,41 @@
     <script src="PhoneList/phone-list.module.js"></script>
     <script src="PhoneList/phone-list.controller.js"></script>
     <script src="PhoneList/phone-list.component.js"></script>
-  </head>
-  <body>
-    <div id="sidebar">
-        <ul class="nav">
-            <li class="active"><a asp-controller="Home" asp-action="Index">Home</a></li>
-            <li><a asp-controller="App" asp-action="About">About</a></li>
-            <li><a asp-controller="App" asp-action="Contact">Contact</a></li>
-            <li><a asp-controller="App" asp-action="Trips">My Trips</a></li>
-            <li><a asp-controller="Auth" asp-action="Logout">Logout</a></li>
-        </ul>
-    </div>
+</head>
 
+<body>
+
+    <div id="sidebar" class="col-md-2">
+        <br>
+        Search: <input ng-model="$ctrl.query" class="form-control input-sm" placeholder="Search Value" />
+    </div>
     <div id="wrapper">
         <div class="navbar navbar-default navbar-fixed-top">
-                <div class="navbar-collapse collapse">
-                    <div style="margin-top: 5Px; margin-left: -0Px" class="panel-heading"> 
-                        <a href="/AddClient" class="btn btn-xs btn-warning"><i class="fa fa-fa-home" aria-hidden="true"></i> Home</a> |&nbsp;
-                        <a href="/AddClient" class="btn btn-xs btn-warning"><i class="fa fa-plus-square" aria-hidden="true"></i> New Client</a>
-                    </div>
+            <div class="navbar-collapse collapse">
+                <div class="panel-heading">
+                    <a href="/AddClient" class="btn btn-xs btn-warning"><i class="fa fa-fa-home" aria-hidden="true"></i> Home</a>                    |&nbsp;
+                    <a href="/AddClient" class="btn btn-xs btn-warning"><i class="fa fa-plus-square" aria-hidden="true"></i> New Client</a>
                 </div>
+            </div>
         </div>
-        
-        <hr>
 
-        <!-- Use a custom component to render a list of phones -->
-        <phone-list></phone-list>
+        <div class="container body-content">
+             <br>
+            <!-- Use a custom component to render a list of phones -->
+            <phone-list></phone-list>
+        </div>
 
         <footer>
-                <hr class="hr-layout" />
-                <div class="float-left">
-                    <p>&copy; 2016.</p>
-                </div>
-            </footer>
+            <hr class="hr-layout" />
+            <div class="float-left">
+                <p>&copy; 2016.</p>
+            </div>
+        </footer>
+
     </div>
-    
-        
-  </body>
+
+
+
+</body>
+
 </html>
