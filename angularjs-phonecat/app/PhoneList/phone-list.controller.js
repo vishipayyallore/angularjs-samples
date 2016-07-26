@@ -9,7 +9,7 @@
         function PhoneListController($scope){
             var vm = this;
             
-
+            vm.queryOn = '';
             vm.phones = [
                 {
                 name: 'Nexus S',
@@ -26,7 +26,7 @@
                 }
             ];
 
-            vm.queryOn = '';
+            
         }
 
 })();
