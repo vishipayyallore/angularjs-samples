@@ -1,6 +1,8 @@
-
+<p>
+    Search: <input ng-model="vm.queryOn" class="form-control input-sm" placeholder="Search Value" />
+</p>
 <ul class="phones">
-    <li ng-repeat="phone in vm.phones">
+    <li ng-repeat="phone in vm.phones | filter: vm.queryOn">
         <span>{{phone.name}}</span>
         <p>{{phone.snippet}}</p>
     </li>
