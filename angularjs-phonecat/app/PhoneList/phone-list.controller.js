@@ -8,6 +8,7 @@
 
         function PhoneListController($scope){
             var vm = this;
+            
 
             vm.phones = [
                 {
@@ -24,6 +25,8 @@
                 snippet: 'The Next, Next Generation tablet.'
                 }
             ];
+
+            vm.queryOn = '';
         }
 
 })();

@@ -16,11 +16,10 @@
     <script src="PhoneList/phone-list.component.js"></script>
 </head>
 
-<body>
+<body ng-controller="PhoneListController as vm">
 
     <div id="sidebar" class="col-md-2">
-        <br>
-        Search: <input ng-model="$ctrl.query" class="form-control input-sm" placeholder="Search Value" />
+        <br> Search: <input ng-model="vm.queryOn" class="form-control input-sm" placeholder="Search Value" />
     </div>
     <div id="wrapper">
         <div class="navbar navbar-default navbar-fixed-top">
@@ -33,9 +32,24 @@
         </div>
 
         <div class="container body-content">
-             <br>
-            <!-- Use a custom component to render a list of phones -->
-            <phone-list></phone-list>
+            <br>
+            <div class="row">
+                <div class="col-md-5">
+                    <p>This is from Template</p>
+                    <!-- Use a custom component to render a list of phones -->
+                    <phone-list></phone-list>
+                </div>
+                <div class="col-md-5">
+                    <p>This is from Main Page.</p>
+                    <ul class="phones">
+                        <li ng-repeat="phone in vm.phones | filter: vm.queryOn">
+                            <span>{{phone.name}}</span>
+                            <p>{{phone.snippet}}</p>
+                        </li>
+                        {{vm.queryOn}}
+                    </ul>
+                </div>
+            </div>
         </div>
 
         <footer>
