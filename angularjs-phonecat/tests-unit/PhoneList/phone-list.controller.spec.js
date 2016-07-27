@@ -1,14 +1,30 @@
-describe('PhoneListController', function() {
-  
-  "use strict";
+"use strict";
+
+describe("phoneListModule", function () {
 
   beforeEach(module("phonecatApp"));
 
-  it("should create a `phones` model with 4 phones", inject(function($controller) {
+  describe('PhoneListController', function () {
+    var _controller;
     var scope = {};
-    var ctrl = $controller("PhoneListController", {$scope: scope});
-    
-    expect(ctrl.phones.length).toBe(4);
-  }));
+
+    beforeEach(inject(function ($controller) {
+      _controller = $controller("PhoneListController", { $scope: scope });
+    }));
+
+    it("should create a `phones` model with 4 phones", inject(function ($controller) {
+      expect(_controller.phones.length).toBe(4);
+    }));
+
+    it("should set a default value for the `queryOn` model", function () {
+      expect(_controller.queryOn).toBe('');
+    });
+
+    it("should create a `orderByOptions` model with 2 Items", inject(function ($controller) {
+      expect(_controller.orderByOptions.length).toBe(2);
+    }));
+
+  });
 
 });
+

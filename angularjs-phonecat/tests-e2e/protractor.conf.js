@@ -1,5 +1,6 @@
-//jshint strict: false
-exports.config = {
+"use strict";
+
+module.exports.config = {
     allScriptsTimeout: 11000,
 
     specs: [ '*.js' ],
