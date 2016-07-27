@@ -1,7 +1,7 @@
 
 module.exports = function(config){
     config.set({
-        basePath: "./app",
+        basePath: "../",
         files: [
             'bower_components/angular/angular.js',
             'bower_components/angular-mocks/angular-mocks.js',
@@ -9,7 +9,8 @@ module.exports = function(config){
             '*!(.module|.spec).js',
             '!(bower_components)/**/*!(.module|.spec).js',
             '**/*.spec.js',
-            './unittests/**/*.spec.js'
+            './tests-unit/*.spec.js',
+            './tests-unit/**/*.spec.js'
         ],
         autoWatch: true,
         frameworks: ["jasmine"],
