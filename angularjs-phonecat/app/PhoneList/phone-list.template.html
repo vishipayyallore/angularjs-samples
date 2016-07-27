@@ -1,9 +1,15 @@
 <p>
     Search: <input ng-model="vm.queryOn" class="form-control input-sm" placeholder="Search Value" />
 </p>
+<p>
+    Sort By:
+    <select class="form-control input-sm" ng-model="vm.orderBy" ng-options="orderByOption.id as orderByOption.desc for orderByOption in vm.orderByOptions">
+        <option value="">Please select ....</option>
+    </select>
+</p>
 <ul class="phones">
-    <li ng-repeat="phone in vm.phones | filter: vm.queryOn">
+    <li ng-repeat="phone in vm.phones | filter: vm.queryOn | orderBy: vm.orderBy">
         <span>{{phone.name}}</span>
-        <p>{{phone.snippet}}</p>
+        <p>{{phone.snippet}} | Age: {{phone.age}}</p>
     </li>
 </ul>
