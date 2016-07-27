@@ -3,7 +3,7 @@
 module.exports.config = {
     allScriptsTimeout: 11000,
 
-    specs: [ '*.js' ],
+    specs: [ '*.js', '**/*.js' ],
 
     capabilities: {
         'browserName': 'chrome'
