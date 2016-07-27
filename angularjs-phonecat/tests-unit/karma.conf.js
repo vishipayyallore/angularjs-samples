@@ -8,9 +8,8 @@ module.exports = function(config){
             '**/*.module.js',
             '*!(.module|.spec).js',
             '!(bower_components)/**/*!(.module|.spec).js',
-            '**/*.spec.js',
-            './tests-unit/*.spec.js',
-            './tests-unit/**/*.spec.js'
+            '../tests-unit/*.spec.js',
+            '../tests-unit/**/*.spec.js'
         ],
         autoWatch: true,
         frameworks: ["jasmine"],
