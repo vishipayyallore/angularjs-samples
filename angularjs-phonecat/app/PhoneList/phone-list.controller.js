@@ -10,12 +10,12 @@
         var vm = this;
 
         vm.queryOn = '';
-        vm.orderBy = 'age';
         vm.orderByOptions = [
             { id: "name", desc: "Name" },
             { id: "age", desc: "Age" }
         ];
-
+        vm.orderBy = vm.orderByOptions[0].id;
+        
         vm.phones = [
             {
                 name: 'Nexus S',
