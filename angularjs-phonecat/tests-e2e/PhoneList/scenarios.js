@@ -24,6 +24,16 @@ describe("Phone Catalog Application", function () {
             expect(phoneList.count()).toBe(4);
         });
 
+        it("should be possible to control phone order via the drop-down menu", function(){
+            var queryOn = element(by.model("vm.queryOn"));
+            var orderBy = element(by.model("vm.orderBy"));
+            var nameOption = orderBy.element(by.css('option[value="name"]'));
+            var phoneNameColumn = element.all(by.repeater('phone in vm.phones')).column('phone.name');
+
+                
+
+        });
+
     });
 
 });
