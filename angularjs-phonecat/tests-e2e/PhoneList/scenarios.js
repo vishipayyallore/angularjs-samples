@@ -38,7 +38,11 @@ describe("Phone Catalog Application", function () {
 
             queryOn.sendKeys('tablet');
 
-            
+            expect(getNames()).toEqual([
+                'Motorola XOOM\u2122 with Wi-Fi',
+                'MOTOROLA XOOM\u2122'
+            ]);
+
 
         });
 
