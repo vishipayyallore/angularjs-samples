@@ -36,6 +36,8 @@ describe("Phone Catalog Application", function () {
                 });
             }    
 
+            queryOn.sendKeys('tablet');
+
             
 
         });
