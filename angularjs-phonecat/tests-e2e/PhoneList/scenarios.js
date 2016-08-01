@@ -30,7 +30,13 @@ describe("Phone Catalog Application", function () {
             var nameOption = orderBy.element(by.css('option[value="name"]'));
             var phoneNameColumn = element.all(by.repeater('phone in vm.phones')).column('phone.name');
 
-                
+            function getNames(){
+                return phoneNameColumn.map(function(elem){
+                    return elem.getText();
+                });
+            }    
+
+            
 
         });
 
