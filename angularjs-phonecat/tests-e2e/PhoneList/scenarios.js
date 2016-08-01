@@ -28,7 +28,7 @@ describe("Phone Catalog Application", function () {
             var queryOn = element(by.model("vm.queryOn"));
             var orderBy = element(by.model("vm.orderBy"));
             var nameOption = orderBy.element(by.css('option[value="name"]'));
-            var phoneNameColumn = element.all(by.repeater('phone in vm.phones')).column('phone.name');
+            var phoneNameColumn = element.all(by.repeater('phone in vm.phones').column('phone.name'));
 
             function getNames(){
                 return phoneNameColumn.map(function(elem){
