@@ -43,6 +43,12 @@ describe("Phone Catalog Application", function () {
                 'MOTOROLA XOOM\u2122'
             ]);
 
+            nameOption.click();
+
+            expect(getNames()).toEqual([
+                'MOTOROLA XOOM\u2122',
+                'Motorola XOOM\u2122 with Wi-Fi'
+            ]);
 
         });
 
