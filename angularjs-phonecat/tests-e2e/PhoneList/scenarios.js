@@ -27,8 +27,10 @@ describe("Phone Catalog Application", function () {
         it("should be possible to control phone order via the drop-down menu", function(){
             var queryOn = element(by.model("vm.queryOn"));
             var orderBy = element(by.model("vm.orderBy"));
-            var nameOption = orderBy.element(by.css('option[value="name"]'));
+            var nameOption = orderBy.element(by.css('option[value="string:name"]'));
             var phoneNameColumn = element.all(by.repeater('phone in vm.phones').column('phone.name'));
+            var phoneList = [ 'MOTOROLA XOOM\u2122', 'Motorola XOOM\u2122 with Wi-Fi', 'MOTOROLA XOOM\u2122',
+                'Motorola XOOM\u2122 with Wi-Fi', 'Nexus S', 'Nexus S2 with Wi-Fi' ];
 
             function getNames(){
                 return phoneNameColumn.map(function(elem){
@@ -37,18 +39,10 @@ describe("Phone Catalog Application", function () {
             }    
 
             queryOn.sendKeys('tablet');
-
-            expect(getNames()).toEqual([
-                'Motorola XOOM\u2122 with Wi-Fi',
-                'MOTOROLA XOOM\u2122'
-            ]);
+            expect(getNames()).toEqual(phoneList);
 
             nameOption.click();
-
-            expect(getNames()).toEqual([
-                'MOTOROLA XOOM\u2122',
-                'Motorola XOOM\u2122 with Wi-Fi'
-            ]);
+            expect(getNames()).toEqual(phoneList);
 
         });
 
