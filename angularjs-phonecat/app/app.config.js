@@ -8,7 +8,6 @@
     function initRouter($stateProvider, $locationProvider, $urlRouterProvider){
         $locationProvider.html5Mode(true);
         $urlRouterProvider.otherwise("/");
-        alert('Home');
         
         $stateProvider
             .state(
