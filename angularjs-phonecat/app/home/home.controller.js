@@ -8,7 +8,6 @@
     function HomeController() {
         var vm = this;
         alert('Home Controller'); 
-           
 
         activate();
 
