@@ -19,7 +19,7 @@
     <script src="home/home.controller.js"></script>
 </head>
 
-<body ng-controller="PhoneListController as vm">
+<body>
 
     <div id="wrapper">
         <div class="navbar navbar-default navbar-fixed-top">
@@ -33,11 +33,14 @@
 
         <div id="sidebar" class="col-md-2">
             <br>
-           
+
         </div>
         <div class="container body-content">
             <br>
-            <h4> {{Angular + JS}}</h4>
+            <div class="row" ng-app="app">
+                {{"Angular JS" + "!!!"}}
+                <ui-view></ui-view>
+            </div>
         </div>
 
         <footer>
