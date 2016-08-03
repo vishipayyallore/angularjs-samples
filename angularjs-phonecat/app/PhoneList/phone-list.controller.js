@@ -8,7 +8,7 @@
 
     function PhoneListController($scope, $http) {
         var vm = this;
-        var phonesUrl = 'data/phones.json';
+        var phonesUrl = 'datastore/phones.json';
         
         vm.queryOn = '';
         vm.orderByOptions = [ { id: "name", desc: "Name" }, { id: "age", desc: "Age" } ];

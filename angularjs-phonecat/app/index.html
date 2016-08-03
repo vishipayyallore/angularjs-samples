@@ -10,26 +10,17 @@
     <link rel="stylesheet" href="bower_components//font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="css/site.css" />
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="app.module.js"></script>
     <script src="PhoneList/phone-list.module.js"></script>
+    <script src="home/home.module.js"></script>
     <script src="PhoneList/phone-list.controller.js"></script>
     <script src="PhoneList/phone-list.component.js"></script>
+    <script src="home/home.controller.js"></script>
 </head>
 
 <body ng-controller="PhoneListController as vm">
 
-    <div id="sidebar" class="col-md-2">
-        <br>
-        <p>
-            Search: <input ng-model="vm.queryOn" class="form-control input-sm" placeholder="Search Value" />
-        </p>
-        <p>
-            Sort By:
-            <select class="form-control input-sm" ng-model="vm.orderBy" ng-options="orderByOption.id as orderByOption.desc for orderByOption in vm.orderByOptions">
-                <option value="">Please select ....</option>
-            </select>
-        </p>
-    </div>
     <div id="wrapper">
         <div class="navbar navbar-default navbar-fixed-top">
             <div class="navbar-collapse collapse">
@@ -40,24 +31,13 @@
             </div>
         </div>
 
+        <div id="sidebar" class="col-md-2">
+            <br>
+           
+        </div>
         <div class="container body-content">
             <br>
-            <div class="row">
-                <div class="col-md-5">
-                    <p>This is from Main Page.</p>
-                    <ul class="phones">
-                        <li ng-repeat="phone in vm.phones | filter: vm.queryOn | orderBy: vm.orderBy">
-                            <span>{{phone.name}}</span>
-                            <p>{{phone.snippet}}| Age: {{phone.age}}</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-5">
-                    <p>This is from Template</p>
-                    <!-- Use a custom component to render a list of phones -->
-                    <phone-list></phone-list>
-                </div>
-            </div>
+            <h4> {{Angular + JS}}</h4>
         </div>
 
         <footer>
@@ -68,8 +48,6 @@
         </footer>
 
     </div>
-
-
 
 </body>
 
