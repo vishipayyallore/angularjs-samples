@@ -1,7 +1,6 @@
 (function () {
-    
     "use strict";
 
-    angular.module("phonecatApp", ["phoneList", "phonecatApp.home", "ui.router"]);
+    angular.module("phonecatApp", ["phonecatApp.phoneList", "phonecatApp.home", "ui.router"]);
 
 })();

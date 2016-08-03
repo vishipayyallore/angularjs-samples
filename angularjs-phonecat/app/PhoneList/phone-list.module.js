@@ -3,6 +3,6 @@
 
     "use strict";
 
-    angular.module("phoneList", []);
+    angular.module("phonecatApp.phoneList", []);
 
 })();
