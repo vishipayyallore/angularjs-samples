@@ -7,12 +7,10 @@
 
     function HomeController() {
         var vm = this;
-        alert('Home Controller'); 
 
         activate();
 
         function activate() {
-            alert('Hi Man!');
         }
     }
 

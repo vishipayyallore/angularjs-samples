@@ -13,7 +13,7 @@
             .state(
                 "home", {
                     url: "/",
-                    templateUrl: "app/home/home.index.html",
+                    templateUrl: "home/home.index.html",
                     controller: "HomeController",
                     controllerAs: "vm"
                 }
@@ -21,7 +21,7 @@
             .state(
                 "phones", {
                     url: "/phones",
-                    templateUrl: "app/PhoneList/phone-index.html",
+                    templateUrl: "PhoneList/phone-index.html",
                     controller: "PhoneListController",
                     controllerAs: "vm"
                 }

@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/">
     <title>Phone Catalog a Sample Angular JS application.</title>
 
     <link rel="stylesheet" href="bower_components//bootswatch/darkly/bootstrap.css" />
@@ -11,10 +12,11 @@
     <link rel="stylesheet" href="css/site.css" />
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    
+
     <script src="app.module.js"></script>
-    <script src="PhoneList/phone-list.module.js"></script>
+    <script src="app.config.js"></script>
     <script src="home/home.module.js"></script>
+    <script src="PhoneList/phone-list.module.js"></script> 
     <script src="PhoneList/phone-list.controller.js"></script>
     <script src="PhoneList/phone-list.component.js"></script>
     <script src="home/home.controller.js"></script>
@@ -26,7 +28,7 @@
             <div class="navbar-collapse collapse">
                 <div class="panel-heading">
                     <a href="/" class="btn btn-xs btn-info"><i class="fa fa-home" aria-hidden="true"></i> Home</a> | 
-                    <a href="/Phones" class="btn btn-xs btn-info"><i class="fa fa-plus-square" aria-hidden="true"></i> Phones List</a>
+                    <a href="/phones" class="btn btn-xs btn-info"><i class="fa fa-plus-square" aria-hidden="true"></i> Phones List</a>
                 </div>
             </div>
         </div>
