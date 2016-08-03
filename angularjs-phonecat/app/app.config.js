@@ -10,12 +10,22 @@
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
-            .state( "home", {
-                url: "/",
-                templateUrl: "app/home/home.index.html",
-                controller: "HomeController",
-                controllerAs: "vm"
-            });
+            .state(
+                "home", {
+                    url: "/",
+                    templateUrl: "app/home/index.html",
+                    controller: "HomeController",
+                    controllerAs: "vm"
+                }
+            )
+            .state(
+                "phones", {
+                    url: "/Phones",
+                    templateUrl: "app/PhoneList/phone-index.html",
+                    controller: "PhoneListController",
+                    controllerAs: "vm"
+                }
+            );
 	}
 
 })();
