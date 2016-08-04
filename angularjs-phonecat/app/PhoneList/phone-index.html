@@ -1,1 +1,19 @@
 <h1>Phone List</h1>
+<a href="/" class="btn btn-xs btn-info"><i class="fa fa-home" aria-hidden="true"></i> Home</a> |
+<a href="" ng-click="vm.addNewClient()" class="btn btn-xs btn-success"><i class="fa fa-floppy-o" aria-hidden="true"></i> Phones List</a> |
+<a href="/Client" class="btn btn-xs btn-warning"><i class="fa fa-refresh" aria-hidden="true"></i> Phones List Component</a>
+<p>
+    Search: <input ng-model="vm.queryOn" class="form-control input-sm" placeholder="Search Value" />
+</p>
+<p>
+    Sort By:
+    <select class="form-control input-sm" ng-model="vm.orderBy" ng-options="orderByOption.id as orderByOption.desc for orderByOption in vm.orderByOptions">
+        <option value="">Please select ....</option>
+    </select>
+</p>
+<ul class="phones">
+    <li ng-repeat="phone in vm.phones | filter: vm.queryOn | orderBy: vm.orderBy">
+        <span>{{phone.name}}</span>
+        <p>{{phone.snippet}} | Age: {{phone.age}}</p>
+    </li>
+</ul>
