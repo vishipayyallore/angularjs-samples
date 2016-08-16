@@ -24,6 +24,14 @@
                     controller: "PhoneListController",
                     controllerAs: "vm"
                 }
+            )
+            .state(
+                "phones1", {
+                    url: "/phones1",
+                    templateUrl: "PhoneList/phone-index1.html",
+                    controller: "PhoneListController",
+                    controllerAs: "vm"
+                }
             );
 	}
 
